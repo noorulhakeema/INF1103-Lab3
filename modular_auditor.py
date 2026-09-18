@@ -1,8 +1,25 @@
 inventory = 0
+failed_attempts= 0
+deliveries_processed = 0
 
-get_valid_input = input("How many stocks to add, or type 'quit' to leave: ")
+def get_valid_input():
+
+    while True:
+        new_stock = input("How many stocks to add, or type 'quit' to leave: ")
+
+        if new_stock.lower() == "quit":
+            return "quit"
+
+        if not new_stock.isdigit():
+            print("type a positive integer.")
+            failed_attempts +=1
+            continue
+
+        return int(new_stock)
+
 def process_delivery(current_total,new_value):
     current_total += new_value
+    
     return current_total
 
 def calculate_tax(amount):
