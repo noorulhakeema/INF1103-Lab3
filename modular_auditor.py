@@ -18,9 +18,8 @@ def get_valid_input():
         return int(new_stock)
 
 def process_delivery(current_total,new_value):
-    current_total += new_value
-    
-    return current_total
+    new_total = current_total +new_value    
+    return new_total
 
 def calculate_tax(amount):
     tax = amount * 0.15
