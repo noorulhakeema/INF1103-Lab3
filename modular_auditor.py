@@ -26,5 +26,6 @@ def calculate_tax(amount):
     return tax
 
 def generate_report(total_units, failed_attempts):
-    print('Total inventory:', total_units)
-    print('Failed entries:', failed_attempts)
+    print('Final Summary:')
+    print('Total deliveries processed:', total_units)
+    print('number of failed entries:', failed_attempts)
